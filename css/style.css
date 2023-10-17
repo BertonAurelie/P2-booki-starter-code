@@ -11,11 +11,19 @@
     --filter-bg-color: #DEEBFF;
 }
 
+.title-filter{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 /****** Header ***********/
 
 header {
     display: flex;
-    padding-right: 0px;
+    flex-basis:1140px;
+    height: 79px;
     align-items: flex-start;
     gap: 946px;
     align-self: stretch;
@@ -24,9 +32,9 @@ header {
 /****** Logo ***********/
 #logo {
     display: flex;
-    padding: 30px 50px;
-    max-width:61.08px;
-    max-height: 19px;
+    margin-top:30px;
+    width:61.08px;
+    height: 19px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;  
@@ -35,34 +43,130 @@ header {
 /****** Menu ***********/
 
 .menu { 
-    font-family: Raleway;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 328.601px;
+    height:35px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 25px;
 }
 .menu li {
-    display:flex;
-    width: 328.601px;
-    padding: 0px 25px;
-    flex-direction: column;
-    flex-direction:space-around;
-    align-items: center;
+    padding: 25px 25px;
+    flex-direction:space-between;
     gap: 68px;
     list-style: none;
     display: table-cell;
     border-top-style:groove;
     border-top-color:transparent;
     border-top-width: 2px;
-    flex-shrink: 0;
+    flex-shrink: 0;    
 }
-
 
 .menu li:hover{
     border-top-style:groove;
     border-top-color:#0065FC;
     color:#0065FC;
+}
+
+
+h1 {
+    margin-bottom: 8px;
+}
+/****** Barre de recherche ***********/
+.barre-recherche {
+    display:flex;
+    margin:35px 0px 35px 0px;
+}
+
+/****** Icone barre de recherche ***********/
+.fa-location-dot {
+    display:flex;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    gap:24px;
+    border-radius: 15px 0px 0px 15px;
+    border: 1px solid var(--Blue, #F2F2F2);
+    background: var(--Blue, #F2F2F2);
+}
+
+
+/****** Zone de texte Barre de recherche ***********/
+.barre-recherche p {
+    display:flex;
+}
+
+
+#recherche {
+    color:black;
+    font-weight:bold;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid var(--Blue, #F2F2F2);
+    padding: 0px 24px 0px 24px;
+}
+
+::placeholder {
+    color:black;
+    font-weight:bold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+ }
+/****** Bouton Barre de recherche ***********/
+input[type="submit"] {
+    padding: 15px 16px;
+    font-size: 18px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid var(--Blue, #0065FC);
+    background: var(--Blue, #0065FC);
+    color:#FFFFFF;
+    font-weight: bold;
+}
+
+/****** Bouton Barre de recherche ***********/
+.filtres {
+    display: flex;
+    margin: 35px 15px 0px 0px;
+    width: 758px;
+    font-weight: bold;
+    font-weight: 700;
+    font-size:18px;
+    align-items:center;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start ;
+    padding: 4px 19px;
+    height:50px;
+    align-items:center;
+    justify-content: space-around;
+    border-radius:25px;
+    border: 2px solid var(--grey-tint-2, #D9D9D9);
+    background: #FFFFFF;
+    font-weight: 700;
+    font-size:17px;
+    font-style:normal;
+    margin-left: 15px;
+}
+
+.filtres .fa-solid {
+    pointer-events: none;
+}
+
+.filtres :hover {
+    border: 2px solid var(--grey-tint-2, #D9D9D9);
+    background: var(--blue-light, #DEEBFF);
+ }
+
+legend {
+    margin-top: 35px;
 }
 
 .fa-solid {
@@ -79,6 +183,7 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    margin:0px 50px 0 50px;
 }
 
 a {
@@ -123,29 +228,84 @@ a {
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
     box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width: 65%; /****** Déjà dans le code ***********/
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.hebergements .populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:30px 30px 30px 30px;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+
+}
+.hebergements-cards .card {
+    display:flex;
+    width:250px;
+    height: 207px;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.hebergements-cards .card-title {
+    margin-bottom:8px;
+    padding-left: 15px;  
+}
+.hebergements-cards .card-subtitle {
+    margin-bottom:8px;
+    padding-left: 15px;  
+}
+.hebergements-cards .card-rating {
+    padding-left: 15px;
+    margin-bottom:8px;  
+}
+.hebergements-cards img {
+    border-radius: 20px 20px 0 0;
+    align-self: cover;
+    height:124px;
+    width: 250px;
+}
+
+.view {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin-bottom:30px;
 }
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    gap:30px;
 }
 
-.populaires-title {
+.populaires .populaires-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin:30px 30px 0 30px;
 }
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin: 33px 30px 0 30px;
 }
 
 .populaires-cards img {
@@ -178,6 +338,40 @@ a {
 }
 
 
+/****** Activités à Marseille ***********/
+.activites-a-marseille {
+    margin:35px 0 35px 0;
+}
+
+.activites-a-marseille .activites-cards {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap:30px;
+}
+
+.activites-a-marseille .card {
+    width: 297px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.activites-a-marseille .card-title {
+    padding: 20px 19px 20px 19px;
+    
+}
+
+.activites-a-marseille img {
+    height: 380px;
+    width: 297px;
+    border-radius: 20px 20px 0 0 ;
+    align-self: stretch;
+    object-fit: cover;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
