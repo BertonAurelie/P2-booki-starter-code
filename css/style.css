@@ -11,13 +11,13 @@
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
-
+/* 
 .title-filter{
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
+} */
 
 /****** Header ***********/
 
@@ -27,17 +27,13 @@ header {
     height: 79px;
     align-items: flex-start;
     justify-content: space-between;
+    margin:0px;
 
 }
 /****** Logo ***********/
 #logo {
-    display: flex;
-    margin-top:30px;
-    width:61.08px;
-    height: 19px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;  
+    padding:30px 50px;
+    height:79px;
 }
 
 /****** Menu ***********/
@@ -116,6 +112,7 @@ i.fa-location-dot {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
+    opacity: 1;
  }
 /****** Bouton Barre de recherche ***********/
 input[type="submit"] {
@@ -130,6 +127,7 @@ input[type="submit"] {
 
 /****** Bouton Barre de recherche ***********/
 .filtres {
+    
     display: flex;
     margin: 35px 15px 0px 0px;
     width: 758px;
@@ -152,6 +150,10 @@ input[type="submit"] {
     font-weight: 700;
     padding: 4px 19px;
     justify-content: space-between;
+    &:hover {
+        border: 2px solid var(--grey-tint-2, #D9D9D9);
+        background: var(--blue-light, #DEEBFF)
+    }
 }
 
 .filtres .fa-solid {
@@ -160,10 +162,6 @@ input[type="submit"] {
     padding-right: 10px;
 }
 
-.filtres :hover {
-    border: 2px solid var(--grey-tint-2, #D9D9D9);
-    background: var(--blue-light, #DEEBFF);
- }
 
 legend {
     margin-top: 35px;
@@ -200,7 +198,13 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+}
+
+.header-container {
+    margin:0px 0px 0 0px;
+}
+
+.body-container {
     margin:0px 50px 0 50px;
 }
 
@@ -252,29 +256,28 @@ a {
 .hebergements {
     width:65%; /****** déjà dans le code ***********/
     padding:30px;
-    height: 612px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .hebergements .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom:30px;
-    
 }
+
 .hebergements-cards {
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content: space-between;
     border-radius: 20px;
-    height: 192px;
+    gap: 30px;
 }
 
 .hebergements-cards .card {
     width:250px;
     height:207px;
-    margin-bottom: 30px;
     padding-bottom: 15px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 }
@@ -284,8 +287,8 @@ a {
     width: 100%;
     align-self: stretch;
     border-radius: 20px 20px 0 0;
-        
 }
+
 .hebergements-cards .card-title {
     margin-bottom:8px;
     padding-left: 15px;  
@@ -297,25 +300,27 @@ a {
 .hebergements-cards .card-rating {
     padding-left: 15px;
     margin-bottom:8px;
- }
+}
 
-
+.hebergements .title-filter {
+    margin-top: 30px;
+}
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
-    gap:30px;
+    height: auto;
+    padding:30px;
 }
 
 .populaires .populaires-title {
     display: flex;
     justify-content: space-between;
-    margin:30px 30px 0 30px;
 }
 
 .populaires-cards .card {
     display: flex;
-    margin: 33px 30px 0 30px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -352,6 +357,7 @@ a {
 .activites-a-marseille {
     margin:35px 0 35px 0;
     padding: 0 30px 0 30px;
+    flex-basis: 612px;
 }
 
 .activites-a-marseille .activites-cards {
@@ -365,6 +371,7 @@ a {
 
 .activites-a-marseille .carde {
     width: 297px;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -397,7 +404,7 @@ a {
 
 .footer1 {
     width: 446px;
-    height: 163px;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding:20px;
@@ -411,27 +418,48 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filtres {
+        display: flex;
+        flex-direction:column;
+        gap:20px;
+        align-items: flex-start;
+        
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        gap:15px;
+    }
+
     .hebergements-and-populaires {
-        flex-direction: column;
+    flex-direction: column;
     }
 
     .hebergements {
         width: 100%;
+        flex-basis:612px;
     }
 
     .populaires {
         width: 100%;
         margin-top: 50px;
+        /*padding:30px; */
+        flex-basis:252px;
+        justify-content: space-around;
     }
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+        object-fit: cover;
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 30%; 
     }
 
     .populaires-cards .card-title {
@@ -441,9 +469,70 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-a-marseille .activites-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .activites-a-marseille .carde {
+        width:100%;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    
+    
+.activites-a-marseille img {
+    height: 200px;
+    width: 193px;
+    }
+    
+.footer {
+    margin-bottom: 0px;
+}
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    header {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #logo {
+        align-self: center;
+        margin:30px;
+    }
+
+    
+    .menu { 
+        display:flex;
+        flex-direction: row;
+        width: 100%;
+        height:auto;
+        justify-content: space-between;
+    }
+    
+    .menu li {
+        padding:0px;
+        margin-bottom:15px;
+        width:188px;
+        height: auto;
+        justify-content: space-between;
+        border-bottom-style:groove;
+        border-bottom-color:#F2F2F2;
+        border-bottom-width: 2px;
+            &:hover {
+            font-style: var(--main-color);
+            border-bottom-color:#0065FC;
+            border-top-color:transparent;
+        }
+    
+    }
 }
