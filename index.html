@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
 <!--ajout kit font awesome-->
     <script src="https://kit.fontawesome.com/ab674341b6.js" crossorigin="anonymous"></script>
 </head>
@@ -19,55 +19,49 @@
 <body>
     <div class="main-container">
         
-    <div class="header-container">
+        <div class="header-container">
             <header>
-    <!--ajout Logo-->
+                <!--ajout Logo-->
                 <img src="images\logo\Booki.png" alt="logo du site" id="logo">
 
-    <!--ajout nav menu-->
+                <!--ajout nav menu-->
                 <nav class = "menu ">
-                    <ul>
                         <li><a href="#Hébergements">Hébergements</a></li>
                         <li><a href="#Activités">Activités</a></li>
-                    </ul>    
-                </nav>
+                    </nav>
             </header>
         </div>
         
         <div class="body-container">
             <main>
-                <section class="recherche">
-                    <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-                    <p>En plein centre-ville ou en pleine nature</p>
-
-    <!--ajout barre de recherche-->
-                        <div class="barre-recherche">
-                            <form method="get" action="">
-                                <p>
-                                    <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
-                                    <input placeholder="Marseille, France" name="recherche" id="recherche">                            
-                                    <input type="submit" value="Rechercher"> 
-                                        <div class="filtres">
-                                            <p>Filtres</p> 
-                                            <div class="buttons">
-                                                <button class="btn"><i class="fa-solid fa-money-bill-wave" style="color: #0065fc;"></i> Economique</button>
-                                                <button class="btn"><i class="fa-solid fa-person" style="color: #0065fc;"></i> Familial</button>
-                                                <button class="btn"><i class="fa-solid fa-heart" style="color: #0065fc;"></i> Romantique</button>
-                                                <button class="btn"><i class="fa-solid fa-fire" style="color: #0065fc;"></i> Nos pépites</button>
-                                            </div>
-                                        </div>
-                                        <legend>
-                                                <span class="i">
-                                                    <i class="fa-solid fa-info"></i>
-                                                </span>
-                                            Plus de 500 logements sont disponibles dans cette ville
-                                        </legend>
-                                </p>                            
-                            </form> 
-                        </div>
-                        
+                <section class="search">
+                    <div class="headline">
+                        <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                        <p>En plein centre-ville ou en pleine nature</p>
+                    </div>
+                    <!--add search-bar-->
+                    <form class="search-bar" method="get" action="">
+                                <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                                <input placeholder="Marseille, France" name="recherche" id="recherche">                            
+                                <button class="text-search" type="submit">rechercher</button>                            
+                                <button class="icon-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>               
+                    </form>
+                    <div class="filter-bar">
+                        <h4 class="title-filter">Filtres</h4>
+                            <button class="btn"><i class="fa-solid fa-money-bill-wave" style="color: #0065fc;"></i> Economique</button>
+                            <button class="btn"><i class="fa-solid fa-person" style="color: #0065fc;"></i> Familial</button>
+                            <button class="btn"><i class="fa-solid fa-heart" style="color: #0065fc;"></i> Romantique</button>
+                            <button class="btn"><i class="fa-solid fa-fire" style="color: #0065fc;"></i> Nos pépites</button>
+                            
+                    </div>
+                    <legend>
+                        <span class="i">
+                            <i class="fa-solid fa-info"></i>
+                        </span>
+                            Plus de 500 logements sont disponibles dans cette ville
+                    </legend>
                 </section>
-                <div class="hebergements-and-populaires">
+            <div class="hebergements-and-populaires">
                     <section class="hebergements">
                         <div class="populaires-title">
                             <h2 class="section-title">Hébergements à Marseille</h2>
