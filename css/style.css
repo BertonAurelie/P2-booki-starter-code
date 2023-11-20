@@ -355,15 +355,18 @@ a {
     flex-basis: 612px;
 }
 #marseille-activities .marseille-cards {
+    width:100%;
     margin-top: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: space-between;
     gap: 30px;
 }
-#marseille-activities .activities-cards {
-    width: 297px;
+#marseille-activities .activities-cards {/* 
+    width: 297px; */
+    width:100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -371,16 +374,23 @@ a {
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 20px 20px 20px 20px;
 }
+
 #marseille-activities .card-title {
     padding: 20px 19px 20px 19px;
 }
-#marseille-activities img {
-    height: 380px;
-    width: 297px;
+.activities-cards img {
+    height: 380px;/* 
+    width: 297px; */
+    width:100%;
     border-radius: 20px 20px 0 0;
-    align-self: stretch;
     object-fit: cover;
 }
+
+.marseille-cards a {
+    width: 22%;
+}
+
+
 
 /****** Footer ***********/
 .footer {
@@ -495,7 +505,7 @@ a {
     }
     .marseille-cards img {
         height: 200px;
-        width: 100%;
+        width: 100%; 
     }
 
 /****** Footer ***********/
@@ -658,10 +668,14 @@ a {
     }
 
 /****** Activités à Marseille ***********/
-    .marseille-cards .activities-cards {
+
+
+    #marseille-activities .activities-cards {
+        width:100%;
+        height:200px;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .marseille-cards a {
@@ -671,13 +685,15 @@ a {
     
     .marseille-cards .activities-cards {
         width:100%;
-        height:auto;
+        height:193px;
     }
 
     .activities-cards img {
-    width: 100%;
-    height: 141px;
-}
+        width:100%;
+        height: 141px;
+}   
+
+
 
 /****** footer ***********/
 .footer {
